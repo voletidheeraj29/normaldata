@@ -1,0 +1,31 @@
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin <project url>
+git push -f origin master
+
+
+
+in commad prompt to save data 
+1. press esc
+2. ":wq"
+w-write data
+q-quitting data
+3.":q!"(Exceptional case to quit data)
+
+
+squashing
+git rebase -i HEAD~3
+
+
+The easiest way would be to find the head commit of the branch as 
+it was immediately before the rebase started in the reflog...
+
+git reflog
+
+
+git reset --hard "HEAD@{5}"
+
+
+You can check the history of the candidate old head by just doing a 
+git log HEAD@{5} (Windows: git log "HEAD@{5}").

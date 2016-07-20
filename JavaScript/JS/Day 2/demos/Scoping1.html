@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+	var someVariable = 'some value';
+	
+	function someFunction() {
+		console.log(" 1 > " + someVariable);			// 1
+		console.log(" 2 > " + window.someVariable);		// 2
+
+		var someVariable = 'some other value';
+		console.log(" 3 > " + someVariable);			// 3
+		console.log(" 4 > " + window.someVariable);		// 4
+
+		return function() {
+			console.log(" 5 > " + someVariable);		// 5
+			console.log(" 6 > " + window.someVariable);	// 6
+		}
+
+		console.log(" 7 > " + someVariable);			// 7
+	}
+
+	console.log(" 8 > " + someVariable);				// 8
+	var returnedFunction = someFunction();
+	console.log(" 9 > " + someVariable);				// 9
+	returnedFunction();
+	console.log("10 > " + someVariable);				// 10
+
+	</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+

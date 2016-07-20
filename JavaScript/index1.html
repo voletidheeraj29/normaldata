@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Creating Objects Example</title>
+<script type="text/javascript">
+function Person(name,age,job)
+{
+
+this.name=name;
+this.age=age;
+this.job=job;
+
+this.sayName= sayName;
+}
+function sayName(){
+
+console.log(this.name);
+
+}
+var person1=new Person("naggesh",22,"SD");
+var person2=new Person("dheeraj",22,"testing");
+person1.sayName();
+person2.sayName();
+ 
+console.log(person1 instanceof Object);
+console.log(person1 instanceof Person);
+console.log(person2 instanceof Object);
+console.log(person2 instanceof Person);
+
+console.log(person1.constructor==Person);
+console.log(person2.constructor==Person);
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

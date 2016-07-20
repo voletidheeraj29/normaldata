@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+	var someObject = {};
+
+	// A function is added to the object as an attribute.
+	someObject.method = function(param1) {
+		// A function is returning another function.
+		return function() {
+		
+		};
+	};
+
+	// Returned function is assigned to a variable.
+	// Function gets a parameter which is another function.
+	var someFunction = someObject.method(function() {
+	
+	});
+
+	// Calling returned function.
+	someFunction();
+
+	</script>
+</head>
+<body>
+</body>
+</html>

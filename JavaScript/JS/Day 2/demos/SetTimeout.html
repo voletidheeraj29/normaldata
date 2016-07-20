@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script>
+		var timeoutid;
+
+		function delayedLog() {
+			timeoutid = setTimeout(slowLog, 3000);
+			console.log('First alert!');
+		}
+
+		function slowLog() {
+			console.log('Second alert! That was really slow!');
+		}
+
+		function clearLog() {
+			clearTimeout(timeoutid);
+		}
+	</script>
+</head>
+
+<body>
+	<button onclick="delayedLog();">Log a message after three seconds</button>
+	<button onclick="clearLog();">Cancel logging before it happens</button>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

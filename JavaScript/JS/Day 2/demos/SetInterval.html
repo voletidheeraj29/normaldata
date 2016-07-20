@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script>
+		var intervalid;
+
+		function changeColor() {
+			intervalid = setInterval(flashText, 1000);
+		}
+
+		function flashText() {
+			var box = document.getElementById("mybox");
+			box.style.color = (box.style.color == "red") ? "blue" : "red";
+		}
+
+		function stopTextColor() {
+			clearInterval(intervalid);
+		}
+	</script>
+</head>
+
+<body onload="changeColor();">
+	<div id="mybox">
+		Hello World!
+	</div>
+
+	<button onclick="stopTextColor();">Stop</button>
+</body>
+
+</html>

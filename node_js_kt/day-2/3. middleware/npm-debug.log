@@ -1,0 +1,64 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'express-generator',
+1 verbose cli   '–g' ]
+2 info using npm@2.14.12
+3 info using node@v4.2.5
+4 verbose install initial load of D:\node_js_kt\day-2\1. express_js_hello_world\package.json
+5 warn package.json hello_world@1.0.0 No description
+6 warn package.json hello_world@1.0.0 No repository field.
+7 warn package.json hello_world@1.0.0 No README data
+8 verbose installManyTop reading scoped package data from D:\node_js_kt\day-2\1. express_js_hello_world\node_modules\express\package.json
+9 verbose readDependencies loading dependencies from D:\node_js_kt\day-2\1. express_js_hello_world\package.json
+10 silly cache add args [ 'express-generator', null ]
+11 verbose cache add spec express-generator
+12 silly cache add args [ '–g', null ]
+13 verbose cache add spec –g
+14 silly cache add parsed spec Result {
+14 silly cache add   raw: 'express-generator',
+14 silly cache add   scope: null,
+14 silly cache add   name: 'express-generator',
+14 silly cache add   rawSpec: '',
+14 silly cache add   spec: 'latest',
+14 silly cache add   type: 'tag' }
+15 silly addNamed express-generator@latest
+16 verbose addNamed "latest" is being treated as a dist-tag for express-generator
+17 info addNameTag [ 'express-generator', 'latest' ]
+18 silly mapToRegistry name express-generator
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry uri https://registry.npmjs.org/express-generator
+22 verbose addNameTag registry:https://registry.npmjs.org/express-generator not in flight; fetching
+23 silly cache add parsed spec Result {
+23 silly cache add   raw: '–g',
+23 silly cache add   scope: null,
+23 silly cache add   name: null,
+23 silly cache add   rawSpec: '–g',
+23 silly cache add   spec: 'D:\\node_js_kt\\day-2\\1. express_js_hello_world\\–g',
+23 silly cache add   type: 'local' }
+24 verbose request uri https://registry.npmjs.org/express-generator
+25 verbose request no auth needed
+26 info attempt registry request try #1 at 5:08:49 PM
+27 verbose request id 40bdb89d959bd7cb
+28 http request GET https://registry.npmjs.org/express-generator
+29 error addLocal Could not install D:\node_js_kt\day-2\1. express_js_hello_world\–g
+30 http 400 https://registry.npmjs.org/express-generator
+31 verbose headers {}
+32 silly get cb [ 400, {} ]
+33 verbose stack Error: ENOENT: no such file or directory, open 'D:\node_js_kt\day-2\1. express_js_hello_world\–g'
+33 verbose stack     at Error (native)
+34 verbose cwd D:\node_js_kt\day-2\1. express_js_hello_world
+35 error Windows_NT 6.3.9600
+36 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "express-generator" "–g"
+37 error node v4.2.5
+38 error npm  v2.14.12
+39 error path D:\node_js_kt\day-2\1. express_js_hello_world\–g
+40 error code ENOENT
+41 error errno -4058
+42 error syscall open
+43 error enoent ENOENT: no such file or directory, open 'D:\node_js_kt\day-2\1. express_js_hello_world\–g'
+43 error enoent This is most likely not a problem with npm itself
+43 error enoent and is related to npm not being able to find a file.
+44 verbose exit [ -4058, true ]

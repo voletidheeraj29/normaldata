@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Creating Objects Example</title>
+<script type="text/javascript">
+
+
+function Person(){
+}
+Person.prototype.name="Dheeraj";
+Person.prototype.age=22;
+Person.prototype.job="SD";
+Person.prototype.sayName=function(){
+console.log(this.name);};
+var person1=new Person();
+person1.sayName();
+var person2=new Person();
+person2.name="Greg";
+console.log(person1.name);
+console.log(person2.name);
+
+console.log(person1.sayName==person2.sayName);
+
+console.log(Person.prototype.isPrototypeOf(person1));
+console.log(Person.prototype.isPrototypeOf(person2));
+
+person2.name="Greg";
+console.log(person2.name);
+console.log(person2.hasOwnProperty("name"));
+console.log("name" in person2);
+
+console.log(person1.name);
+console.log(person1.hasOwnProperty("name"));
+console.log("name" in person1);
+
+delete person2.name;
+console.log(person2.name);
+console.log(person2.hasOwnProperty("name"));
+console.log("name" in person2);
+
+console.log(person1);
+
+</script>
+</head>
+</body>
+</html>

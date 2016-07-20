@@ -1,0 +1,75 @@
+<html>
+<head>
+<script language="javascript">
+var flag=0,a,b,c;
+function perform(value)
+{
+if(flag==0)
+{
+b=parseInt(value);
+a=f1.t1.value;
+document.f1.t1.value='';
+flag=1;
+}
+else
+{
+c=f1.t1.value;
+document.f1.t1.value='';
+if(b==1)
+{
+var d=parseFloat(a)+parseFloat(c);
+document.f1.t1.value=d;
+}
+else if(b==2)
+{
+var d=parseFloat(a)-parseFloat(c);
+document.f1.t1.value=d;
+
+}
+else if(b==3)
+{
+var d=parseFloat(a)*parseFloat(c);
+document.f1.t1.value=d;
+}
+else
+{
+var d=parseFloat(a)/parseFloat(c);
+document.f1.t1.value=d;
+}
+flag=0;
+}
+}
+</script>
+</head>
+<body><center>
+<font color="green" size="6" face="elephant"><b><u>CALCULATOR</u></b></font>
+</br></br></br>
+<table border="2" bordercolor="green" cellpadding="2" >
+<tr>
+<td><form name="f1">
+<input type="text" name="t1" id="txt1">
+</form></td></tr>
+<tr>
+<td><form name="f2">
+<input type="button" value=" 1 " onclick="document.f1.t1.value+='1'" >
+<input type="button" value=" 2 " onclick="document.f1.t1.value+='2'">
+<input type="button" value=" 3 " onclick="document.f1.t1.value+='3'">
+<input type="button" value=" + " onclick="perform(1)"></br>
+<input type="button" value=" 4 " onclick="document.f1.t1.value+='4'">
+<input type="button" value=" 5 " onclick="document.f1.t1.value+='5'">
+<input type="button" value=" 6 " onclick="document.f1.t1.value+='6'">
+<input type="button" value=" - " onclick="perform(2)"></br>
+<input type="button" value=" 7 " onclick="document.f1.t1.value+='7'">
+<input type="button" value=" 8 " onclick="document.f1.t1.value+='8'">
+<input type="button" value=" 9 " onclick="document.f1.t1.value+='9'">
+<input type="button" value=" * " onclick="perform(3)"></br>
+<input type="button" value=" 0 " onclick="document.f1.t1.value+='0'">
+<input type="button" value=" / " onclick="perform(4)">
+<input type="button" value=" = " onclick="perform(value)">
+<input type="reset" value= " clr " onclick="document.f1.t1.value='' ">
+</form></td>
+</tr>
+</table>
+</center>
+</body>
+</html>

@@ -1,0 +1,27 @@
+Dheeraj RVS Voleti 
+
+
+
+1.Nodejs
+  Node.js application with UI using the RestApi .In this I worked with express js and ejs to print it in UI 
+  and connected to database to update the data .after creating this api we gave demo to Roshan 
+
+2.ELK
+  I created a use case to Generate a Log Generator Java code which will generate logs with changing IP address 
+  and Error Codes (eg.200,300,400 etc) and save it in a particular file and informed to Aniket 
+
+3.Vagrant
+   studied basic commands of vargant and created a Virtual machine of ubuntu in vagrant .
+
+4.Mesos
+   Mesos Installation and aniket send document. He ask me to follow those commands. In that Document I am not able to do
+   some commands i asked aniket because of websense it is not working and then he told me to concentrate on jenkins
+ 
+5.Jenkins
+   Now iam Working on jenkins and github.Trying to make changes in the code in github that reflect to jenkins 
+  (integrating jenkins with Github)
+
+
+
+
+

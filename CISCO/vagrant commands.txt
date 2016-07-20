@@ -1,0 +1,17 @@
+mkdir <folder name>
+cd <folder name>
+vagrant box add ubuntu/trusty64
+
+Vagrant init <box-name>
+Vagrant up
+Vagrant ssh
+
+
+
+
+C:\Users\dheerajv\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Docker
+
+
+
+
+P36531708

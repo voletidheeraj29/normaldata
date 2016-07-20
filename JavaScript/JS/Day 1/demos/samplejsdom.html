@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validate Inputs</title>
+	<script>
+
+	// validate the inputs on this page
+	function ValidateForm() {
+		var regex;
+
+		// validate name
+		var name = document.getElementById('name').value;
+		var namemessage = document.getElementById('namemessage');
+		regex = /\b[a-zA-Z]+\b/;
+		if (regex.test(name)) {
+			namemessage.innerHTML = 'Valid!';
+			namemessage.style.color = 'green';
+		}
+		else {
+			namemessage.innerHTML = 'Not Valid!';
+			namemessage.style.color = 'red';
+		}
+
+		// validate age
+		var age = document.getElementById('age').value;
+		var agemessage = document.getElementById('agemessage');
+		regex = /\b[0-9]+\b/;
+		if (regex.test(age)) {
+			agemessage.innerHTML = 'Valid!';
+			agemessage.style.color = 'green';
+		}
+		else {
+			agemessage.innerHTML = 'Not Valid!';
+			agemessage.style.color = 'red';
+		}
+
+	}
+
+	// reset any meesages that were displayed
+	function ResetMessage() {
+		var input = ['name', 'age'];
+		for (var i=0; i < input.length; i++) {
+			document.getElementById(input[i] + 'message').innerHTML = '';
+		}
+	}
+	</script>
+</head>
+<body>
+	<h1 style="text-align: center;">Validate Inputs</h1>
+	<form style="text-align: center;">
+		<div>
+			<span>Name:</span>
+			<input id="name" type="text" />
+			<span id="namemessage"></span>
+		</div>
+		<br / >
+		<div>
+			<span>Age:</span>
+			<input id="age" type="text" />
+			<span id="agemessage"></span>
+		</div>
+		<br / >
+		<div>
+			<input type="button" value="Validate Inputs" onclick="ValidateForm();">
+			<input type="button" value="Reset Messages" onclick="ResetMessage();">
+		</div>
+	</form>
+</body>
+</html>
+
+
+
+
+

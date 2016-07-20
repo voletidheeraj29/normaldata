@@ -1,0 +1,37 @@
+1) Open github. Create a new repository. Add a Readme file.
+
+2) Create a java project in Eclipse. Save it in workspace.
+ 1. To create a gradle project in eclipse:: go to help > eclipse marketplace > type buildship gradle and gradle sts. Install it.
+ 2. File > New > Project > Gradle > next > finish
+
+3) Go to workspace in local machine. Open git bash. To upload the code in github, follow the commands:
+ git init
+ git add .
+ git commit -m "Initial commit"
+ git remote add origin <project url>
+ git push -f origin master
+
+4) If you want to make some changes in the code, make the changes in the project in workspace. Again use the above commands and you can write something different instead of "initial commit". Refresh the github. The changes will be reflected in github and the commit number increases.
+
+5) Jenkins:: Create new item in jenkins. Freestyle project.
+
+6) Click on Manage Jenkins > Manage plugins > Available > type git plugin > Install without restart.
+
+7) Click on configure in the jenkin project(new item). > Source code management > check Git repositories > give the git repository url(in github project > clone or download > copy the url). > Build triggers > check build when change is pushed to github > Check Poll SCM > save.
+
+8) Build now > in build history.. #1 > workspace. Check the changes made. Follow the same steps if changes are made again. And again click build now.
+
+9) To automatically update the changes, go to github > settings > webhook and services > give the url http://localhost:8080/git/notifyCommit?url=https://github.com/aishwaryavairagade/GradleProject.git.
+
+10) This URL won't work in localhost so there are 2 techniques to expose it on internet: 1)Using ngork 2) writing the server.
+ 1. Using ngork: install ngork. Extract all. Open it.
+ 2. Give commands: ngrok http 8080. Copy the forwarding url: http://...
+ 3. Paste it in the webhook url in git. 
+
+11) Go to Jenkins(that copied url) > search
+
+12) To show output in console: Install gradle. Set path, This pc > Right click, Properties > Advanced system setting > evironment variables > variable name:GRADLE_HOME, VARIABLE VALUE: C:\Users\aishwaryav\workspace2\gradle-2.14 > apply,ok.
+
+13) To check the installation, open cmd: gradle. go to the project path, run: gradle build.
+
+14) In jenkins, configure > build > execute windows command shell > cd/build/libs , java -jar GradleProject.jar.

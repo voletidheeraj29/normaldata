@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Creating Objects Example</title>
+<script type="text/javascript">
+
+
+function Person(){
+}
+Person.prototype={
+constructor:Person,
+name:"Naggesh",
+age:21,
+job:"SD",
+friends:["Dasa","Dheeraj"],
+sayName:function(){
+console.log(this.name);
+}
+};
+var person1=new Person();
+var person2=new Person();
+
+person1.friends.push('Abhishek');
+
+console.log(person1.friends);
+console.log(person2.friends);
+</script>
+</head>
+<body>
+</body>
+</html>

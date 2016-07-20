@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Details</title>
+<script>
+	function validateform(){  
+var fname=document.myForm.fname.value; 
+var reg1=/^([a-z]+[A-Z]*)$/;
+var lname=document.myForm.lname.value;
+var reg2=/^([a-z]+[A-Z]*)$/;
+var dob = document.myForm.dob.value;
+var pattern =/^(([0][1-9]||[1-2][0-9])||[3][0-1])-([0][1-9]||[1][0-2])-([1][0-9][0-9][0-9]||[2][0][0-1][0-5])$/;
+var email = document.myForm.email.value;
+var pattern1=/^(([a-zA-Z0-9.#]*[a-zA-z0-9]+[A-Z0-9.#]*)[@]([a-z]+)[.]([a-z]{2,3}[.])*([a-z]{2,4}))$/
+var hobby= document.myForm.hobby.value;
+if (fname==null || fname=="")
+{  
+document.myForm.fname.style.border ='1px solid red';
+  alert("FirstName cannot be empty");  
+  document.myForm.fname.style.border ='';
+  return false;  
+}
+else if(!reg1.test(fname)){
+document.myForm.fname.style.border ='1px solid red';
+  alert("invalid firstname ");  
+  document.myForm.fname.style.border ='';
+  return false;  
+}
+
+else if(lname==null || lname=="")
+{  
+document.myForm.lname.style.border ='1px solid red';
+  alert("Lastname cannot be empty");  
+  document.myForm.lname.style.border ='';
+  return false;  
+  } 
+    else if(!reg2.test(lname)){
+document.myForm.lname.style.border ='1px solid red';
+  alert("invalid lastname ");  
+  document.myForm.lname.style.border ='';
+  return false;  
+}
+
+
+   else  if (dob == null || dob == ""  )
+      {
+	   document.myForm.dob.style.border ='1px solid red';
+       alert("date of birth cannot be empty\n"); 
+	   document.myForm.dob.style.border ='';
+	   return false;
+	   }
+	 else if(!pattern.test(dob)){
+
+	   document.myForm.dob.style.border ='1px solid red';
+	   alert("please enter valid date");
+	   document.myForm.dob.style.border ='';
+	   }
+	   
+	   
+ else if(email==null || email=="")
+{
+document.myForm.email.style.border ='1px solid red';
+alert(" email address cannot be empty ");
+document.myForm.email.style.border ='';
+return false;
+}  
+else if(!pattern1.test(email)){
+document.myForm.email.style.border ='1px solid red';
+alert("please enter valid email");
+document.myForm.email.style.border ='';
+return false
+}
+}
+
+	function extra(read)
+	{
+		var reading = document.getElementById("Reading");
+        reading.style.display = read.checked ? "block" : "none";
+		}
+		var s=0,m=0,h=0;
+		function setTime()
+		{
+		document.getElementById("demo").innerHTML="welcome to "+ navigator.appName + navigator.appVersion;
+		     	   document.getElementById('txt').innerHTML = h+":"+m+":"+s;
+			s++;
+            if(s%60===0)
+                {
+                	s=0;
+                	m++;
+                }
+      		if((m%60===0) && (m!==0))
+          		{
+          			s=0;
+          			m=0;
+          			h++;
+          		}
+
+    		setTimeout(setTime, 1000);
+		}
+	
+</script> 
+
+</head> 
+<center>
+<body  onload="setTime()"> 
+<div id="demo"></div>
+
+ <div><span id="txt"></span></div>
+<form name="myForm" method="post"  onsubmit="return validateform()" >  
+ <table> 
+ <tr>
+ <td>FirstName:</td>
+ <td><input type="text" name="fname"></td>
+</tr>
+<br/>
+
+<tr>
+<td>LastName: </td>
+ <td><input type="text" name="lname">  </td>
+</tr>
+<br>
+
+<tr>
+<td>DateofBirth:</td>
+ <td><input type="text" name="dob" placeholder="DD-MM-YYYY" >  </td>
+</tr>
+
+
+<tr>
+<td>Email Address: </td>
+ <td><input type="text" name="email" placeholder="something@something.com">  </td>
+</tr>
+
+
+<tr><td>Hobbies:</td>
+<td><input type="checkbox" name="hobby" id="read" value="Reading" onclick="extra(this)"> Reading</td></tr>
+<tr><td></td><td><input type="checkbox" name="hobby" value="Movies"> Watching movies </td></tr>
+<tr><td></td><td><input type="checkbox" name="hobby" value="Photography"> Photography </td></tr>
+<tr><td colspan="2"> <div id="Reading" style="display: none">
+Favourite writer:
+<input type="text" name="favwriter"> 
+</div></td></tr>
+<td><input type="submit" value="submit">
+<td><input type="submit" value="Reset"></td> 
+</center>
+</table>
+</form>  
+</body>
+</html>
